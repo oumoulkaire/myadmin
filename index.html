@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myAdmin</title>
+</head>
+
+<body id="home" class="scrollspy">
+    <!--Navbar-->
+    <section>
+        <div class="navbar-fixed">
+            <nav class=" blue">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo">myAdmin</a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                                class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="index.html">Dashbord</a>
+                            </li>
+                            <li>
+                                <a href="Post.html">posts</a>
+                            </li>
+                            <li>
+                                <a href="categorie.html">Categories</a>
+                            </li>
+                            <li>
+                                <a href="comment.html">Comments</a>
+                            </li>
+                            <li>
+                                <a href="user.html">Users</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <a href="#Dashbord">Dashbord</a>
+            </li>
+            <li>
+                <a href="#posts">posts</a>
+            </li>
+            <li>
+                <a href="#Categories">Categories</a>
+            </li>
+            <li>
+                <a href="#>Comments">Comments</a>
+            </li>
+            <li>
+                <a href="user.html">Users</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col s12 m3 center ">
+
+                    <div class="card horizontal blue">
+
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <i class="fa-solid fa-face-smile fa-4x" style="color: white;"></i>
+                                <p style="color: white;">Monthy Visitors</p>
+                                <p style="color: white;">35900</p>
+                                <div class="progress" style="color: white;">
+                                    <div class="determinate" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+
+                    <div class="card horizontal">
+
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <i class="fa-solid fa-pencil fa-4x"></i>
+                                <p>Blog Posts</p>
+                                <p>207</p>
+                                <div class="progress">
+                                    <div class="determinate" style="width: 40%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+
+                    <div class="card horizontal blue">
+
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <i class="fa-solid fa-message fa-4x" style="color: white;"></i>
+                                <p style="color: white;">Comments</p>
+                                <p style="color: white;">2300</p>
+                                <div class="progress" style="color: white;">
+                                    <div class="determinate" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+
+                    <div class="card horizontal">
+
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <i class="fa-solid fa-user fa-4x"></i>
+                                <p>Users</p>
+                                <p>410</p>
+                                <div class="progress">
+                                    <div class="determinate" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section style="background-color: rgb(162, 211, 243); padding: 15  px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col s12 l8">
+                    <div class="card">
+                        <script>
+                            window.onload = function () {
+
+                                var chart = new CanvasJS.Chart("chartContainer", {
+                                    animationEnabled: true,
+                                    theme: "light2",
+                                    title: {
+                                        text: "Simple Line Chart"
+                                    },
+                                    data: [{
+                                        type: "line",
+                                        indexLabelFontSize: 16,
+                                        dataPoints: [
+                                            { y: 450 },
+                                            { y: 414 },
+                                            { y: 520, indexLabel: "\u2191 highest", markerColor: "red", markerType: "triangle" },
+                                            { y: 460 },
+                                            { y: 450 },
+                                            { y: 500 },
+                                            { y: 480 },
+                                            { y: 480 },
+                                            { y: 410, indexLabel: "\u2193 lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+                                            { y: 500 },
+                                            { y: 480 },
+                                            { y: 510 }
+                                        ]
+                                    }]
+                                });
+                                chart.render();
+
+                            }
+                        </script>
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    </div>
+
+                </div>
+                <div class="col s12 l4 ">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <h6>Latest Comments</h6>
+                        <hr>
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="images (1).jpeg" alt="" class="circle responsive-img">
+                                <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                                <p>Rachida Zakou</p>
+                                <span class="black-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                                <p>Approve/Deny</p>
+                                <hr>
+                            </div>
+
+                        </div>
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="ave1.jpeg" alt="" class="circle responsive-img">
+                                <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                                <p>Mohamed</p>
+                                <span class="black-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                                <p>Approve/Deny</p>
+                                <hr>
+                            </div>
+
+                        </div>
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="images (1).jpeg" alt="" class="circle responsive-img">
+                                <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                                <p>yasmine Abani</p>
+                                <span class="black-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </span>
+                                <p>Approve/Deny</p>
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l8">
+
+                    <div class="card horizontal">
+                        <div class="card-image">
+
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>Recent Posts</p>
+                            </div>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Post One</td>
+                                        <td>Web Developement</td>
+                                        <td><a class="waves-effect waves-light btn-large blue">Button</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Post Two</td>
+                                        <td>Graphie Design</td>
+                                        <td><a class="waves-effect waves-light btn-large blue">Button</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Post Three</td>
+                                        <td>Web Developement</td>
+                                        <td><a class="waves-effect waves-light btn-large blue">Button</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                   
+                    <div class="card horizontal">
+                     
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <p>Quick Todos</p>
+                          <p>Add</p> <hr>
+                        </div>
+                        <ul class="collection with-header">
+                            
+                            <li class="collection-item"><div>Top One<a href="#!" class="secondary-content"><i class="material-icons">clear</i></a></div></li>
+                            <li class="collection-item"><div>Top Two<a href="#!" class="secondary-content"><i class="material-icons">clear</i></a></div></li>
+                           
+                          </ul>
+                                
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating blue modal-trigger" href="#modal1"><i class="material-icons">mode</i></a>
+                <!-- Modal Trigger 1-->
+    
+    
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div class="card">
+                        <h4>Add Post</h4>
+                        <p>Title</p> <hr>
+                        <h6>Select Option</h6> <hr>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+            </li>
+    
+            <li>
+                <a class="btn-floating blue modal-trigger" href="#modal2"><i class="material-icons">folder</i></a>
+    
+                <!-- Modal Trigger 1-->
+    
+    
+                <!-- Modal Structure -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <h4>Add Category</h4>
+                        <p>title</p> <hr>
+                        <a class="waves-effect waves-light btn blue">button</a>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="btn-floating blue modal-trigger" href="#modal3"><i class="material-icons">people</i></a>
+    
+                <!-- Modal Trigger 1-->
+    
+    
+                <!-- Modal Structure -->
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <h5 class="center">Contact</h5>
+                        <div class="input-field">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="phone">
+                        </div>
+                        <div class="input-field">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                        <p class="center"><input type="submit" value="submit" class="78909c blue-grey lighten"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <footer class="page-footer blue" style="text-align: center; position: fixed; bottom: 0; width: 100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+
+                    <p style="text-align: center;">MyAdmin Codeloccol Copyright @ 2019</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                </div>
+            </div>
+
+
+
+        </div>
+    </footer>
+    <!--JavaScript at end of body for optimized loading-->
+
+
+
+
+    <script>
+        // Sidenav
+        document.addEventListener('DOMContentLoaded', function () {
+            var nav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(nav, {});
+            // slider
+            var slider = document.querySelectorAll('.slider');
+            M.Slider.init(slider, { indicators: false });
+            //Material Boxed
+            const mb =  document.querySelectorAll('.materialboxed');
+            M.Materialbox.init(mb, {})
+            var btn = document.querySelectorAll('.fixed-action-btn');
+            M.FloatingActionButton.init(btn, {
+                direction: 'top'
+            });
+        });
+
+
+    </script>
+<script>
+      $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
+</body>
+
+</html>
